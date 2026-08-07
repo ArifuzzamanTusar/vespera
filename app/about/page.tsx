@@ -19,7 +19,7 @@ export default function AboutPage() {
     <>
       <FadeIn>
         <div className="page-head">
-          <p className="eyebrow">About Vesperaaaaaaaaaa</p>
+          <p className="eyebrow">About Vespera</p>
           <h1>A house, not a storefront</h1>
           <p>
             Understated luxury, built on a relationship between the tin and the
