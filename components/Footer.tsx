@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="wrap">
         <div className="footer-grid">
           <div className="footer-col">
-            <h4>Vespera Caviar</h4>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "14px" }}>
+              <Image
+                src="/images/vespera-logo.png"
+                alt="Vespera Caviar"
+                width={28}
+                height={28}
+                style={{ width: 28, height: 28, objectFit: "contain" }}
+              />
+              <h4 style={{ margin: 0 }}>Vespera Caviar</h4>
+            </div>
             <p>
               Exceptional caviar, shipped from New York. Sustainably sourced,
               malossol, never frozen.
@@ -32,9 +42,10 @@ export default function Footer() {
           </div>
 
           <div className="footer-col">
-            <h4>Coming Soon</h4>
-            <p>Subscription tins</p>
-            <p>Gift sets &amp; concierge delivery</p>
+            <h4>Bespoke Services</h4>
+            <Link href="/contact">Private Dining &amp; Events</Link>
+            <Link href="/contact">Corporate Gifting Desk</Link>
+            <Link href="/contact">Sommelier Consultations</Link>
           </div>
         </div>
 

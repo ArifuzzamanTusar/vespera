@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import SafeImage from "@/components/SafeImage";
 import RoeTin from "@/components/RoeTin";
@@ -9,53 +10,74 @@ import BlurRevealText from "@/components/motion/BlurRevealText";
 import AuroraBlobs from "@/components/motion/AuroraBlobs";
 import GoldGrain from "@/components/motion/GoldGrain";
 import ParallaxHero from "@/components/motion/ParallaxHero";
+import { siteConfig, absoluteUrl } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Vespera Caviar — Exceptional Caviar, Shipped from New York",
-  description:
-    "Sustainably farmed roe, malossol-cured and never frozen, sent to your door overnight in a temperature-controlled case. No storefront, no middleman — just the tin.",
-  alternates: { canonical: "https://vesperacaviar.com" },
+  title: `${siteConfig.name} — Exceptional Caviar, Shipped from New York`,
+  description: siteConfig.description,
+  alternates: { canonical: "/" },
 };
 
-// JSON-LD — WebSite + Organization
+// JSON-LD — WebSite + Organization + WebPage
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
       "@type": "WebSite",
-      "@id": "https://vesperacaviar.com/#website",
-      url: "https://vesperacaviar.com",
-      name: "Vespera Caviar",
-      description:
-        "Exceptional caviar, sustainably sourced, malossol-cured, and never frozen. Shipped from New York.",
+      "@id": absoluteUrl("/#website"),
+      url: siteConfig.url,
+      name: siteConfig.name,
+      description: siteConfig.description,
       potentialAction: {
         "@type": "SearchAction",
         target: {
           "@type": "EntryPoint",
-          urlTemplate:
-            "https://vesperacaviar.com/shop?q={search_term_string}",
+          urlTemplate: `${absoluteUrl("/shop")}?q={search_term_string}`,
         },
         "query-input": "required name=search_term_string",
       },
     },
     {
       "@type": "Organization",
-      "@id": "https://vesperacaviar.com/#organization",
-      name: "Vespera Caviar",
-      url: "https://vesperacaviar.com",
-      description:
-        "A small New York house working directly with sustainable sturgeon farms. Malossol-cured, never frozen caviar shipped overnight.",
+      "@id": absoluteUrl("/#organization"),
+      name: siteConfig.name,
+      legalName: siteConfig.legalName,
+      url: siteConfig.url,
+      logo: absoluteUrl(siteConfig.images.logo),
+      image: absoluteUrl(siteConfig.images.ogImage),
+      description: siteConfig.description,
+      priceRange: siteConfig.priceRange,
+      currenciesAccepted: siteConfig.currenciesAccepted,
+      paymentAccepted: siteConfig.paymentAccepted,
       address: {
         "@type": "PostalAddress",
-        addressLocality: "New York",
-        addressRegion: "NY",
-        addressCountry: "US",
+        addressLocality: siteConfig.contact.city,
+        addressRegion: siteConfig.contact.state,
+        postalCode: siteConfig.contact.postalCode,
+        addressCountry: siteConfig.contact.country,
       },
       contactPoint: {
         "@type": "ContactPoint",
-        email: "concierge@vesperacaviar.com",
+        email: siteConfig.contact.email,
         contactType: "customer service",
+        availableLanguage: ["English"],
       },
+      knowsAbout: [
+        "Artisanal Caviar",
+        "Sturgeon Aquaculture",
+        "Malossol Curing",
+        "Acipenser baerii",
+        "Huso dauricus",
+      ],
+    },
+    {
+      "@type": "WebPage",
+      "@id": absoluteUrl("/#webpage"),
+      url: siteConfig.url,
+      name: `${siteConfig.name} — ${siteConfig.tagline}`,
+      isPartOf: { "@id": absoluteUrl("/#website") },
+      about: { "@id": absoluteUrl("/#organization") },
+      description: siteConfig.description,
     },
   ],
 };
@@ -102,21 +124,20 @@ export default function HomePage() {
             }}
           >
             <FadeIn delay={0} duration={0.8}>
-              <svg
+              <Image
+                src="/images/vespera-logo.png"
+                alt="Vespera Caviar Icon"
+                width={92}
+                height={92}
+                priority
                 className="hero-mark"
-                viewBox="0 0 64 68"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-              >
-                <path d="M9 9 L31 46 L53 9" stroke="#C9A227" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
-                <circle cx="31" cy="24" r="9" stroke="#C9A227" strokeWidth="1.4" fill="#0A0A0A" />
-                <circle cx="27.5" cy="22" r="1.3" fill="#3a3324" />
-                <circle cx="31.5" cy="26.5" r="1.6" fill="#241f14" />
-                <circle cx="34.5" cy="21.5" r="1.1" fill="#453d28" />
-                <line x1="31" y1="46" x2="31" y2="60" stroke="#C9A227" strokeWidth="1.2" />
-                <circle cx="31" cy="63" r="2.6" fill="#111008" stroke="#C9A227" strokeWidth="0.8" />
-              </svg>
+                style={{
+                  width: "92px",
+                  height: "auto",
+                  objectFit: "contain",
+                  filter: "drop-shadow(0 0 24px rgba(201, 162, 39, 0.4))",
+                }}
+              />
             </FadeIn>
 
             <h1 style={{ fontSize: "clamp(38px,6vw,68px)", lineHeight: 1.06, maxWidth: "14ch", textAlign: "center", margin: "0 0 0.5em" }}>

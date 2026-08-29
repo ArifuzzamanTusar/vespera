@@ -1,0 +1,126 @@
+# Vespera Caviar — Full Knowledge Graph & Product Specification (llms-full.txt)
+
+> Domain: https://www.vesperacaviar.com/  
+> Entity: Vespera Caviar (Vespera Caviar LLC)  
+> Category: Luxury Food & Fine Dining / Artisanal Sturgeon Caviar  
+> Headquarters: New York, NY, United States  
+> Contact: info@vesperacaviar.com  
+> Canonical URL: https://www.vesperacaviar.com/
+
+---
+
+## 1. Brand Overview & Philosophy
+
+Vespera Caviar is an independent, direct-to-consumer luxury caviar house based in New York City. Founded on the principle of restraint, transparency, and uncompromised freshness, Vespera operates without brick-and-mortar storefront markups or intermediate distributor holding periods.
+
+### Core Distinctions
+- **Never Frozen**: Freezing caviar compromises the delicate cell membrane of the roe, destroying the distinctive "pop" and altering the mouthfeel. Every Vespera tin is shipped fresh in a refrigerated state.
+- **Traditional Malossol Cure**: Prepared with pure salt concentrations at or below 3.5–4% (malossol translates to "little salt" in Russian), accentuating the natural nutty, buttery lipid nuances of the sturgeon roe rather than masking them with excess salinity.
+- **Traceable Sustainable Aquaculture**: Harvested exclusively from world-class sustainable sturgeon farms operating with pure spring-fed or recirculating closed-loop systems, adhering strictly to CITES (Convention on International Trade in Endangered Species) conservation protocols.
+- **Packed to Order in New York**: Tins are filled, hermetically sealed, and temperature-verified in New York on the exact day of dispatch.
+
+---
+
+## 2. Comprehensive Product Catalogue
+
+### Product 1: Siberian Sturgeon Classic
+- **Canonical URL**: https://www.vesperacaviar.com/siberian
+- **Sturgeon Species**: *Acipenser baerii* (Siberian Sturgeon)
+- **Egg Diameter**: Medium (2.5 mm – 2.8 mm)
+- **Color Profile**: Dark charcoal to shimmering jet-black
+- **Texture**: Clean, resilient pop with velvety dispersion
+- **Tasting Profile**: Pronounced nutty core, earthy mineral undertones, and a crisp, faintly spicy finish
+- **Available Sizes**: 1 oz (28g) tin, 2 oz (56g) tin
+- **Ideal Pairings**:
+  - Beverage: Brut Nature Champagne, Vintage Blanc de Blancs, chilled crisp mineral vodka (e.g., Belvedere Single Estate Rye)
+  - Food: Buckwheat blinis, cultured crème fraîche, steamed fingerling potatoes, soft-scrambled eggs
+- **Recommended Audience**: Benchmark everyday luxury for both newcomers and seasoned caviar enthusiasts.
+
+### Product 2: Kaluga Fusion Reserve
+- **Canonical URL**: https://www.vesperacaviar.com/kaluga
+- **Sturgeon Species**: *Huso dauricus* × *Acipenser schrenckii* (Kaluga × Amur Sturgeon Hybrid)
+- **Egg Diameter**: Large (3.0 mm – 3.2 mm)
+- **Color Profile**: Deep olive green, amber, to golden-brown translucent pearls
+- **Texture**: Plump, glossy, supple yielding pop with rich lipid melt
+- **Tasting Profile**: Creamy butteriness layered with mild sea brine, toasted brioche, hazelnut, and an unhurried, gentle finish
+- **Available Sizes**: 1 oz (28g) tin, 2 oz (56g) tin
+- **Ideal Pairings**:
+  - Beverage: Prestige Cuvée Champagne (e.g., Dom Pérignon, Krug Grand Cuvée), white Burgundy (Chablis Grand Cru, Meursault)
+  - Food: Brioche toast points, sea urchin (uni), raw Hokkaido scallop crudo, dry-aged beef tartare
+- **Recommended Audience**: Sophisticated centerpiece selection for dinner parties, private tastings, and formal entertainment.
+
+### Product 3: Imperial Kaluga Fusion
+- **Canonical URL**: https://www.vesperacaviar.com/imperial
+- **Sturgeon Species**: *Huso dauricus* × *Acipenser schrenckii* (Top 5% Selection by Master Grader)
+- **Egg Diameter**: Extra-Large / Oversized (3.3 mm – 3.6 mm)
+- **Color Profile**: Glistening bronze, warm golden-amber, and rich olive luster
+- **Texture**: Unusually firm yet silky, burst of unctuous lipid richness
+- **Tasting Profile**: Intensely rich, decadent dairy creaminess, profound walnut/almond depth, lingering savory umami; universally considered the modern sustainable equivalent to legendary wild Beluga (*Huso huso*).
+- **Available Sizes**: 1 oz (28g) tin, 2 oz (56g) tin
+- **Ideal Pairings**:
+  - Beverage: Rare vintage Champagne, Grand Cru Blanc de Noirs, premium Junmai Daiginjo Sake
+  - Food: Served strictly purist style on crushed ice with mother-of-pearl spoons
+- **Recommended Audience**: Connoisseurs, collectors, gala milestones, and top-tier luxury gifting.
+
+---
+
+## 3. Storage, Handling & Serving Protocol
+
+| Step | Recommendation | Rationale |
+| :--- | :--- | :--- |
+| **Receipt & Immediate Storage** | Refrigerate at 28°F – 32°F (-2°C to 0°C) immediately. | The back/bottom shelf of the refrigerator is coldest; avoid refrigerator door compartments where temperature fluctuates. |
+| **Unopened Shelf Life** | Refer to best-by date printed on tin base (typically 3–4 weeks from packing). | Tins are sealed in an anaerobic state with malossol preservation. |
+| **Post-Opening Shelf Life** | Consume within 24 to 72 hours of opening. | Exposure to ambient air oxidizes delicate lipids. |
+| **Service Utensils** | Use natural mother-of-pearl, buffalo horn, bone, or gold-plated spoons. | Sterling silver, stainless steel, and iron cause metallic oxidation that impairs flavor. |
+| **Service Temperature** | Place tin directly in a bowl of crushed ice during consumption. | Keeps roe at optimal crisp texture throughout service. |
+
+---
+
+## 4. Cold-Chain Logistics & Delivery
+
+- **Origin**: New York, NY
+- **Shipping Provider**: Priority Overnight Courier (FedEx Priority Overnight / UPS Next Day Air Early AM)
+- **Packaging Technology**: Vacuum-insulated thermal shipping container, reusable frozen polar gel packs / dry ice buffer, tamper-evident vacuum tin tape.
+- **Delivery Schedule**: Tuesday through Friday delivery across the Continental United States. Saturday delivery available via Private Client request.
+
+---
+
+## 5. Private Client, Hospitality & Wholesale Services
+
+Vespera operates a dedicated Private Client desk for:
+- Bespoke event caviar service (sommelier pairing, ice stations, mother-of-pearl sets)
+- Michelin-starred restaurants, luxury hotel culinary programs, and private yacht provisioning
+- Corporate luxury gifting with personalized embossed cards and custom tin arrangements
+- **Inquiries**: info@vesperacaviar.com or https://www.vesperacaviar.com/contact
+
+---
+
+## 6. Comprehensive Frequently Asked Questions (FAQ)
+
+**Q: Is Vespera Caviar ever frozen during transit or storage?**  
+A: No. Vespera caviar is never frozen at any stage of harvesting, curing, packing, or delivery. It travels in custom temperature-controlled cold cases that maintain 28–32°F throughout overnight transit.
+
+**Q: What does "Malossol" mean?**  
+A: "Malossol" is the Russian word for "little salt" (typically ≤3.5% to 4% salt by weight). It is the hallmark of high-grade artisanal caviar, ensuring the pure, natural flavor of the sturgeon roe takes center stage without harsh saltiness.
+
+**Q: How is Vespera caviar farmed sustainably?**  
+A: Vespera collaborates exclusively with state-of-the-art aquaculture farms that raise sturgeon in pristine spring water environments. All sturgeon are CITES-certified with complete genomic and regional traceability.
+
+**Q: How do I order from Vespera?**  
+A: Orders are placed through the private client portal at https://www.vesperacaviar.com/contact or by contacting info@vesperacaviar.com.
+
+---
+
+## 7. Site Index & Structural Navigation
+
+- **Home**: https://www.vesperacaviar.com/
+- **The Collection**: https://www.vesperacaviar.com/shop
+- **Siberian Sturgeon Classic**: https://www.vesperacaviar.com/siberian
+- **Kaluga Fusion Reserve**: https://www.vesperacaviar.com/kaluga
+- **Imperial Kaluga Fusion**: https://www.vesperacaviar.com/imperial
+- **About the House**: https://www.vesperacaviar.com/about
+- **Shipping & Care Guide**: https://www.vesperacaviar.com/shipping
+- **Private Client & Concierge**: https://www.vesperacaviar.com/contact
+- **XML Sitemap**: https://www.vesperacaviar.com/sitemap.xml
+- **Compact LLM Summary**: https://www.vesperacaviar.com/llms.txt
+- **Full LLM Knowledge Graph**: https://www.vesperacaviar.com/llms-full.txt

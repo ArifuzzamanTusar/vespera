@@ -6,17 +6,77 @@ import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
 import BlurRevealText from "@/components/motion/BlurRevealText";
+import { siteConfig, absoluteUrl, createBreadcrumbSchema } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "Shipping & Care",
+  title: "Shipping & Care — Overnight Cold Chain Protocol",
   description:
     "Every Vespera tin travels packed to order, sealed cold, and shipped overnight from New York. Refrigerate at 28–32°F and enjoy within 2–3 days of opening.",
-  alternates: { canonical: "https://vesperacaviar.com/shipping" },
+  alternates: { canonical: "/shipping" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "ItemPage",
+      "@id": absoluteUrl("/shipping#webpage"),
+      url: absoluteUrl("/shipping"),
+      name: "Vespera Caviar Shipping & Care Guide",
+      description:
+        "Information on Vespera Caviar's overnight refrigerated cold chain, storage temperatures, and tasting presentation.",
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "How does Vespera ship caviar to ensure freshness?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Every tin is packed to order in New York and shipped overnight in a vacuum-insulated thermal case with specialized cooling packs maintaining 28–32°F throughout transit.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How should caviar be stored upon arrival?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Refrigerate immediately at 28–32°F (-2°C to 0°C), preferably in the coldest rear compartment of your refrigerator rather than the door.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What is the shelf life of unopened and opened caviar tins?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Unopened tins maintain peak quality until the best-by date stamped on the base (typically 3–4 weeks). Once opened, consume within 2–3 days while keeping chilled.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Why should I use mother-of-pearl spoons for serving caviar?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Reactive metals like silver and stainless steel can oxidize and impart a metallic aftertaste to delicate sturgeon roe. Non-reactive mother-of-pearl, horn, or gold preserves pure flavor.",
+          },
+        },
+      ],
+    },
+    createBreadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Shipping & Care", path: "/shipping" },
+    ]),
+  ],
 };
 
 export default function ShippingPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <FadeIn>
         <div className="page-head">
           <p className="eyebrow">Shipping &amp; Care</p>

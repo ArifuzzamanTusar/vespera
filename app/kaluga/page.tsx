@@ -1,33 +1,86 @@
 import type { Metadata } from "next";
 import { getProduct } from "@/lib/products";
 import ProductPage from "@/components/ProductPage";
+import { siteConfig, absoluteUrl, createBreadcrumbSchema } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Kaluga Fusion Reserve",
   description:
     "Large, glossy deep olive to brown pearls. Rich butteriness layered with subtle sweetness and a complex nutty finish. Malossol, never frozen, shipped from New York.",
-  alternates: { canonical: "https://vesperacaviar.com/kaluga" },
+  alternates: { canonical: "/kaluga" },
   openGraph: {
     title: "Kaluga Fusion Reserve | Vespera Caviar",
     description: "Buttery, balanced, briny elegance. Large olive-brown pearls. Malossol, never frozen.",
-    url: "https://vesperacaviar.com/kaluga",
+    url: "/kaluga",
   },
 };
 
+// JSON-LD Product & Breadcrumb schema
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: "Kaluga Fusion Reserve",
-  brand: { "@type": "Brand", name: "Vespera Caviar" },
-  description:
-    "Large, glossy deep olive to brown pearls. Rich butteriness layered with subtle sweetness and a complex nutty finish.",
-  category: "Caviar",
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    seller: { "@type": "Organization", name: "Vespera Caviar" },
-  },
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": absoluteUrl("/kaluga#product"),
+      name: "Kaluga Fusion Reserve",
+      image: [
+        absoluteUrl("/images/tin-kaluga.jpg"),
+        absoluteUrl(siteConfig.images.ogImage),
+      ],
+      description:
+        "Large, glossy deep olive to brown pearls. Rich butteriness layered with subtle sweetness and a complex nutty finish. Malossol-cured, never frozen.",
+      sku: "VES-KAL-002",
+      brand: {
+        "@type": "Brand",
+        name: siteConfig.name,
+      },
+      category: "Gourmet Food > Caviar",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "USD",
+        price: "135.00",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        url: absoluteUrl("/kaluga"),
+        seller: {
+          "@type": "Organization",
+          name: siteConfig.name,
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: {
+            "@type": "MonetaryAmount",
+            value: "0.00",
+            currency: "USD",
+          },
+          shippingDestination: {
+            "@type": "DefinedRegion",
+            addressCountry: "US",
+          },
+          deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 1,
+              unitCode: "d",
+            },
+            transitTime: {
+              "@type": "QuantitativeValue",
+              minValue: 1,
+              maxValue: 1,
+              unitCode: "d",
+            },
+          },
+        },
+      },
+    },
+    createBreadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Collection", path: "/shop" },
+      { name: "Kaluga Fusion Reserve", path: "/kaluga" },
+    ]),
+  ],
 };
 
 export default function KalugaPage() {
@@ -38,13 +91,6 @@ export default function KalugaPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/*
-        IMAGE: /public/images/tin-kaluga.jpg
-        Size: 800×800px
-        Prompt: "Close-up caviar tin, large olive-brown pearls glistening,
-                 warm amber side lighting, rich deep brown tones, dark studio,
-                 macro luxury editorial, no background distractions"
-      */}
       <ProductPage
         product={product}
         imageSrc="/images/tin-kaluga.jpg"

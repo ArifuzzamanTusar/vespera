@@ -1,77 +1,33 @@
 # Vespera Caviar — llms.txt
 
+> High-end, sustainably sourced caviar house based in New York. Malossol-cured, never frozen, packed to order, and shipped overnight nationwide.
+> Full Knowledge Base: https://www.vesperacaviar.com/llms-full.txt
+
 ## About
+Vespera Caviar is an artisanal caviar purveyor operating directly from New York. By eliminating middleman holding times and retail storefront delays, Vespera delivers fresh, never-frozen sturgeon roe in peak condition.
 
-Vespera Caviar is a luxury caviar house based in New York City. We source
-sustainably farmed sturgeon roe and sell it directly to consumers — malossol-
-cured, never frozen, packed to order, and shipped overnight in a temperature-
-controlled case. There is no retail storefront. Every tin goes directly from
-our facility to the customer's door.
+## Core Offerings
 
-## Products
+| Selection | Species | Pearl Character | Profile | Canonical URL |
+| :--- | :--- | :--- | :--- | :--- |
+| **Siberian Sturgeon Classic** | *Acipenser baerii* | Medium, jet-black | Nutty, earthy, clean pop, mild spice finish | https://www.vesperacaviar.com/siberian |
+| **Kaluga Fusion Reserve** | *Huso dauricus* × *Amur* | Large, olive-brown | Buttery, subtle sweetness, brioche, briny | https://www.vesperacaviar.com/kaluga |
+| **Imperial Kaluga Fusion** | *Huso dauricus* × *Amur* (Top 5%) | Oversized, golden-amber | Intensely creamy, rich almond/walnut, Beluga-like | https://www.vesperacaviar.com/imperial |
 
-We offer three caviar selections:
+## Standards & Quality Commitments
+- **Cure**: Traditional Malossol (≤3.5%–4% pure sea salt)
+- **State**: 100% Fresh — never frozen
+- **Provenance**: Sustainable, CITES-certified sturgeon farms
+- **Logistics**: Packed to order in New York and dispatched via temperature-controlled overnight transit (28–32°F)
 
-### Siberian Sturgeon Classic
-- Species: Acipenser baerii
-- Pearl size: Medium (dark grey to jet-black)
-- Flavor: Nutty, earthy, slightly spicy finish. Firm, satisfying pop.
-- Use: Versatile everyday luxury. Pairs with blinis, crème fraîche, champagne.
-- Sizes: 1 oz, 2 oz
-- URL: https://vesperacaviar.com/siberian
+## Serving & Care
+- **Storage**: Refrigerate immediately at 28–32°F (-2°C to 0°C)
+- **Unopened Life**: 3–4 weeks (check date stamp on tin base)
+- **Opened Life**: Enjoy within 2–3 days; keep chilled on crushed ice
+- **Utensils**: Mother-of-pearl, horn, bone, or gold-plated spoons (avoid reactive metals)
 
-### Kaluga Fusion Reserve
-- Species: Kaluga (Huso dauricus) × Amur sturgeon hybrid
-- Pearl size: Large (deep olive to brown)
-- Flavor: Rich butteriness, subtle sweetness, complex nutty finish. Clean briny elegance.
-- Use: Sophisticated yet approachable. Ideal with dry Champagne or as a tasting centerpiece.
-- Sizes: 1 oz, 2 oz
-- URL: https://vesperacaviar.com/kaluga
-
-### Imperial Kaluga Fusion
-- Species: Kaluga × Amur, top selection
-- Pearl size: Oversized, firm, deeply colored
-- Flavor: Intensely creamy and buttery, long lingering finish, refined nutty depth.
-- Comparison: Often likened to classic Beluga in character.
-- Use: Special occasions, connoisseurs. Serve simply on ice with mother-of-pearl.
-- Sizes: 1 oz, 2 oz
-- URL: https://vesperacaviar.com/imperial
-
-## Standards
-
-- **Cure**: Malossol (lightly salted, ≤5% salt) — traditional method
-- **Frozen**: Never. All tins ship fresh.
-- **Sustainability**: Sourced exclusively from responsible, traceable sturgeon farms
-- **Stock**: Packed to order, never held in inventory
-
-## Shipping
-
-- Ships from: New York, NY
-- Method: Overnight, temperature-controlled insulated case
-- Storage on arrival: 28–32°F, coldest part of refrigerator
-- Shelf life (unopened): Best-by date on tin base, typically 2–3 weeks from packing
-- After opening: Consume within 2–3 days, keep sealed on ice
-
-## Ordering
-
-Orders are placed via the Private Client enquiry form or by email. There is no
-self-checkout e-commerce system at this time.
-
-- Enquiry form: https://vesperacaviar.com/contact
-- Email: concierge@vesperacaviar.com
-- Wholesale / events: Available via Private Client desk
-
-## Contact
-
-- Email: concierge@vesperacaviar.com
-- Location: New York, NY, USA
-- Response time: Within one business day
-
-## URLs
-
-- Home: https://vesperacaviar.com
-- Collection: https://vesperacaviar.com/shop
-- About: https://vesperacaviar.com/about
-- Shipping & Care: https://vesperacaviar.com/shipping
-- Private Client: https://vesperacaviar.com/contact
-- Sitemap: https://vesperacaviar.com/sitemap.xml
+## Contact & Private Client
+- **Email**: info@vesperacaviar.com
+- **Website**: https://www.vesperacaviar.com/
+- **Inquiry Portal**: https://www.vesperacaviar.com/contact
+- **Full Knowledge Specification**: https://www.vesperacaviar.com/llms-full.txt

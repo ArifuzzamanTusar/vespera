@@ -1,33 +1,86 @@
 import type { Metadata } from "next";
 import { getProduct } from "@/lib/products";
 import ProductPage from "@/components/ProductPage";
+import { siteConfig, absoluteUrl, createBreadcrumbSchema } from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: "Imperial Kaluga Fusion",
   description:
     "The largest and most luxurious pearls in the collection — oversized, firm, intensely creamy. Often compared to classic Beluga. Malossol, never frozen, shipped from New York.",
-  alternates: { canonical: "https://vesperacaviar.com/imperial" },
+  alternates: { canonical: "/imperial" },
   openGraph: {
     title: "Imperial Kaluga Fusion | Vespera Caviar",
     description: "The house's most luxurious tin. Intensely creamy, likened to Beluga. Malossol, never frozen.",
-    url: "https://vesperacaviar.com/imperial",
+    url: "/imperial",
   },
 };
 
+// JSON-LD Product & Breadcrumb schema
 const jsonLd = {
   "@context": "https://schema.org",
-  "@type": "Product",
-  name: "Imperial Kaluga Fusion",
-  brand: { "@type": "Brand", name: "Vespera Caviar" },
-  description:
-    "The largest and most luxurious pearls in the collection — oversized, firm, deeply colored. Intensely creamy with a long, lingering finish.",
-  category: "Caviar",
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "USD",
-    availability: "https://schema.org/InStock",
-    seller: { "@type": "Organization", name: "Vespera Caviar" },
-  },
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": absoluteUrl("/imperial#product"),
+      name: "Imperial Kaluga Fusion",
+      image: [
+        absoluteUrl("/images/tin-imperial.jpg"),
+        absoluteUrl(siteConfig.images.ogImage),
+      ],
+      description:
+        "The largest and most luxurious pearls in the collection — oversized, firm, deeply colored. Intensely creamy with a long, lingering finish. Malossol-cured, never frozen.",
+      sku: "VES-IMP-003",
+      brand: {
+        "@type": "Brand",
+        name: siteConfig.name,
+      },
+      category: "Gourmet Food > Caviar",
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "USD",
+        price: "195.00",
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+        url: absoluteUrl("/imperial"),
+        seller: {
+          "@type": "Organization",
+          name: siteConfig.name,
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingRate: {
+            "@type": "MonetaryAmount",
+            value: "0.00",
+            currency: "USD",
+          },
+          shippingDestination: {
+            "@type": "DefinedRegion",
+            addressCountry: "US",
+          },
+          deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 1,
+              unitCode: "d",
+            },
+            transitTime: {
+              "@type": "QuantitativeValue",
+              minValue: 1,
+              maxValue: 1,
+              unitCode: "d",
+            },
+          },
+        },
+      },
+    },
+    createBreadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Collection", path: "/shop" },
+      { name: "Imperial Kaluga Fusion", path: "/imperial" },
+    ]),
+  ],
 };
 
 export default function ImperialPage() {
@@ -38,13 +91,6 @@ export default function ImperialPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/*
-        IMAGE: /public/images/tin-imperial.jpg
-        Size: 800×800px
-        Prompt: "Oversized gold-rimmed caviar tin open, large deep-colored pearls,
-                 opulent dark studio lighting, rich shadow, regal and luxurious feeling,
-                 close-up macro, black background with subtle gold reflection"
-      */}
       <ProductPage
         product={product}
         imageSrc="/images/tin-imperial.jpg"

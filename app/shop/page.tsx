@@ -5,17 +5,51 @@ import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
 import BlurRevealText from "@/components/motion/BlurRevealText";
+import { siteConfig, absoluteUrl, createBreadcrumbSchema } from "@/lib/site-config";
+import { PRODUCTS } from "@/lib/products";
 
 export const metadata: Metadata = {
-  title: "The Collection",
+  title: "The Collection — All Caviar Selections",
   description:
     "Browse all three Vespera Caviar selections — Siberian Sturgeon Classic, Kaluga Fusion Reserve, and Imperial Kaluga Fusion. Sustainably farmed, malossol-cured, never frozen.",
-  alternates: { canonical: "https://vesperacaviar.com/shop" },
+  alternates: { canonical: "/shop" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": absoluteUrl("/shop#webpage"),
+      url: absoluteUrl("/shop"),
+      name: "The Vespera Caviar Collection",
+      description:
+        "Browse all three Vespera Caviar selections — Siberian Sturgeon Classic, Kaluga Fusion Reserve, and Imperial Kaluga Fusion.",
+      mainEntity: {
+        "@type": "ItemList",
+        itemListElement: PRODUCTS.map((product, idx) => ({
+          "@type": "ListItem",
+          position: idx + 1,
+          name: product.name,
+          url: absoluteUrl(`/${product.slug}`),
+          description: product.shortDesc,
+        })),
+      },
+    },
+    createBreadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "Collection", path: "/shop" },
+    ]),
+  ],
 };
 
 export default function ShopPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <FadeIn>
         <div className="page-head">
           <p className="eyebrow">The Collection</p>

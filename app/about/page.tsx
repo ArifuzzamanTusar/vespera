@@ -6,17 +6,45 @@ import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
 import BlurRevealText from "@/components/motion/BlurRevealText";
+import { siteConfig, absoluteUrl, createBreadcrumbSchema } from "@/lib/site-config";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About the House",
   description:
     "Vespera Caviar — a small New York house working directly with sustainable sturgeon farms. No storefront, no distributor markup. Every tin packed to order.",
-  alternates: { canonical: "https://vesperacaviar.com/about" },
+  alternates: { canonical: "/about" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "AboutPage",
+      "@id": absoluteUrl("/about#webpage"),
+      url: absoluteUrl("/about"),
+      name: "About Vespera Caviar",
+      description:
+        "A small New York house working directly with sustainable sturgeon farms. Malossol-cured, never frozen caviar shipped overnight.",
+      mainEntity: {
+        "@type": "Organization",
+        name: siteConfig.name,
+        url: siteConfig.url,
+      },
+    },
+    createBreadcrumbSchema([
+      { name: "Home", path: "/" },
+      { name: "About", path: "/about" },
+    ]),
+  ],
 };
 
 export default function AboutPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <FadeIn>
         <div className="page-head">
           <p className="eyebrow">About Vespera</p>

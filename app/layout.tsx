@@ -1,8 +1,9 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Playfair_Display, EB_Garamond, Jost } from "next/font/google";
 import "./globals.css";
 import SiteNav from "@/components/SiteNav";
 import Footer from "@/components/Footer";
+import { siteConfig } from "@/lib/site-config";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -10,6 +11,7 @@ const playfair = Playfair_Display({
   style: ["normal", "italic"],
   variable: "--font-playfair",
   display: "swap",
+  preload: true,
 });
 
 const garamond = EB_Garamond({
@@ -18,6 +20,7 @@ const garamond = EB_Garamond({
   style: ["normal", "italic"],
   variable: "--font-garamond",
   display: "swap",
+  preload: true,
 });
 
 const jost = Jost({
@@ -25,36 +28,32 @@ const jost = Jost({
   weight: ["400", "500", "600"],
   variable: "--font-jost",
   display: "swap",
+  preload: true,
 });
 
-const BASE_URL = "https://vesperacaviar.com";
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0A0A0A" },
+    { media: "(prefers-color-scheme: light)", color: "#0A0A0A" },
+  ],
+  colorScheme: "dark",
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
-  metadataBase: new URL(BASE_URL),
+  metadataBase: new URL(siteConfig.url),
 
   title: {
-    default: "Vespera Caviar — Exceptional Caviar, Shipped from New York",
-    template: "%s | Vespera Caviar",
+    default: `${siteConfig.name} — Exceptional Caviar, Shipped from New York`,
+    template: `%s | ${siteConfig.name}`,
   },
-  description:
-    "Sustainably farmed roe, malossol-cured and never frozen, sent to your door overnight in a temperature-controlled case. No storefront, no middleman — just the tin.",
-  keywords: [
-    "caviar",
-    "sturgeon caviar",
-    "malossol caviar",
-    "Siberian sturgeon",
-    "Kaluga caviar",
-    "buy caviar online",
-    "caviar delivery New York",
-    "luxury caviar",
-    "never frozen caviar",
-    "sustainable caviar",
-    "caviar gift",
-    "gourmet food New York",
-  ],
-  authors: [{ name: "Vespera Caviar", url: BASE_URL }],
-  creator: "Vespera Caviar",
-  publisher: "Vespera Caviar",
+  description: siteConfig.description,
+  keywords: [...siteConfig.keywords],
+  authors: [{ name: siteConfig.name, url: siteConfig.url }],
+  creator: siteConfig.name,
+  publisher: siteConfig.name,
   category: "Food & Gourmet",
 
   robots: {
@@ -69,38 +68,45 @@ export const metadata: Metadata = {
     },
   },
 
+  icons: {
+    icon: [
+      { url: siteConfig.images.logo, type: "image/png" },
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: [
+      { url: siteConfig.images.logo, sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: siteConfig.images.logo,
+  },
+
   openGraph: {
     type: "website",
-    siteName: "Vespera Caviar",
+    siteName: siteConfig.name,
     locale: "en_US",
-    url: BASE_URL,
-    title: "Vespera Caviar — Exceptional Caviar, Shipped from New York",
-    description:
-      "Sustainably farmed roe, malossol-cured and never frozen, sent to your door overnight. No storefront, no middleman — just the tin.",
+    url: siteConfig.url,
+    title: `${siteConfig.name} — Exceptional Caviar, Shipped from New York`,
+    description: siteConfig.description,
     images: [
       {
-        url: "/opengraph-image",
+        url: siteConfig.images.ogImage,
         width: 1200,
         height: 630,
-        alt: "Vespera Caviar — Exceptional Caviar, Shipped from New York",
-        type: "image/png",
+        alt: `${siteConfig.name} — Exceptional Caviar, Shipped from New York`,
+        type: "image/jpeg",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "Vespera Caviar — Exceptional Caviar, Shipped from New York",
+    title: `${siteConfig.name} — Exceptional Caviar, Shipped from New York`,
     description:
       "Sustainably farmed roe, malossol-cured and never frozen. Overnight delivery from New York.",
-    images: [{ url: "/twitter-image", alt: "Vespera Caviar" }],
-    // Update with your Twitter handle when available:
-    // site: "@vesperacaviar",
-    // creator: "@vesperacaviar",
+    images: [{ url: siteConfig.images.ogImage, alt: siteConfig.name }],
   },
 
   alternates: {
-    canonical: BASE_URL,
+    canonical: "/",
   },
 
   // Update with real verification tokens before launch:

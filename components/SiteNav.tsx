@@ -5,6 +5,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, useScroll, useMotionValueEvent } from "motion/react";
 
+import Image from "next/image";
+
 const LINKS = [
   { href: "/", label: "Home", match: ["/"] },
   { href: "/shop", label: "Collection", match: ["/shop"] },
@@ -48,21 +50,15 @@ export default function SiteNav() {
       style={{ backdropFilter: "blur(12px)" }}
     >
       <div className="nav-inner">
-        <Link className="nav-logo" href="/">
-          <svg
-            viewBox="0 0 64 68"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path d="M9 9 L31 46 L53 9" stroke="#C9A227" strokeWidth="2.75" strokeLinecap="round" strokeLinejoin="round" />
-            <circle cx="31" cy="24" r="9" stroke="#C9A227" strokeWidth="1.4" fill="#0A0A0A" />
-            <circle cx="27.5" cy="22" r="1.3" fill="#3a3324" />
-            <circle cx="31.5" cy="26.5" r="1.6" fill="#241f14" />
-            <circle cx="34.5" cy="21.5" r="1.1" fill="#453d28" />
-            <line x1="31" y1="46" x2="31" y2="60" stroke="#C9A227" strokeWidth="1.2" />
-            <circle cx="31" cy="63" r="2.6" fill="#111008" stroke="#C9A227" strokeWidth="0.8" />
-          </svg>
+        <Link className="nav-logo" href="/" aria-label="Vespera Caviar Home">
+          <Image
+            src="/images/vespera-logo.png"
+            alt="Vespera Caviar Logo"
+            width={34}
+            height={34}
+            priority
+            style={{ width: 34, height: 34, objectFit: "contain" }}
+          />
           <span className="nav-wordmark">VESPERA</span>
         </Link>
 
