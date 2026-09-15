@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SafeImage from "@/components/SafeImage";
-import RoeTin from "@/components/RoeTin";
 import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
@@ -60,13 +59,6 @@ export default function AboutPage() {
       <section>
         <div className="wrap split">
           <FadeIn y={40}>
-            {/*
-              IMAGE: /public/images/about-story.jpg
-              Size: 1200×800px
-              Prompt: "Elegant hands carefully opening a black caviar tin, gold rim,
-                       white linen cloth, candlelight, fine dining atmosphere,
-                       dark moody background, cinematic shallow depth of field"
-            */}
             <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", border: "1px solid rgba(201,162,39,0.28)", overflow: "hidden" }}>
               <SafeImage
                 src="/images/about-story.jpg"
@@ -75,9 +67,6 @@ export default function AboutPage() {
                 sizes="(max-width:820px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
-              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <RoeTin size="lg" />
-              </div>
             </div>
           </FadeIn>
           <FadeIn delay={0.2} y={40}>

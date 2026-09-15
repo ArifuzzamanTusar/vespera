@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import RoeTin from "@/components/RoeTin";
+import SafeImage from "@/components/SafeImage";
 import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
@@ -66,7 +66,15 @@ export default function ShopPage() {
         <div className="wrap">
           <StaggerGrid className="grid-3">
             <div className="card">
-              <RoeTin size="sm" />
+              <div className="card-tin-wrap">
+                <SafeImage
+                  src="/images/tin-siberian.jpg"
+                  alt="Siberian Sturgeon Classic"
+                  fill
+                  sizes="110px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="species">Acipenser baerii</p>
               <h3>Siberian Sturgeon Classic</h3>
               <p>
@@ -77,7 +85,15 @@ export default function ShopPage() {
               <Link href="/siberian" className="btn">View Tin</Link>
             </div>
             <div className="card">
-              <RoeTin size="sm" />
+              <div className="card-tin-wrap">
+                <SafeImage
+                  src="/images/tin-kaluga.jpg"
+                  alt="Kaluga Fusion Reserve"
+                  fill
+                  sizes="110px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="species">Kaluga × Amur Hybrid</p>
               <h3>Kaluga Fusion Reserve</h3>
               <p>
@@ -87,7 +103,15 @@ export default function ShopPage() {
               <Link href="/kaluga" className="btn">View Tin</Link>
             </div>
             <div className="card">
-              <RoeTin size="sm" />
+              <div className="card-tin-wrap">
+                <SafeImage
+                  src="/images/tin-imperial.jpg"
+                  alt="Imperial Kaluga Fusion"
+                  fill
+                  sizes="110px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="species">Kaluga × Amur, Top Selection</p>
               <h3>Imperial Kaluga Fusion</h3>
               <p>

@@ -6,7 +6,21 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
-## [1.4.0] - 2026-08-29
+## [1.7.0] - 2026-08-29
+### Changed
+- Redesigned product pages (`ProductPage.tsx`) with high-end luxury visual hierarchy and eliminated duplicate tin image repetition.
+- Added Sommelier & Culinary Pairing Card (Beverage pairing, Table accompaniments, and Serving rituals).
+- Upgraded `ProductControls.tsx` with dynamic price display ($95 / $180, etc.), responsive 1oz/2oz toggle, and clear ordering CTAs.
+- Added three house pillars micro-cards (Purity, Integrity, Logistics) and profile attribute pills to all product detail routes.
+### Fixed
+- Refactored grid systems (`grid-3`, `grid-2`, `ship-steps`) to use individual hairline borders and transparent containers, eliminating background color leakage across all screen sizes.
+- Fixed 2-product layout on product pages (`ProductPage.tsx`) using responsive `.grid-2` so empty 3rd columns no longer render background blocks.
+- Fixed step card height stretching in `ship-steps` on the Shipping & Care page.
+### Fixed
+- Removed dark circular mock overlays (`RoeTin`) blocking editorial photographs on Home, About, and Shipping pages.
+- Replaced empty mock circles in Featured Selection cards and Shop collection with real circular product tin photography.
+- Fixed grid height stretching in `grid-3` to eliminate background leakage under cards of unequal height on the About page commitments section.
+- Cleaned up obsolete `RoeTin.tsx` component and associated CSS.
 ### Added
 - Integrated high-res featured social & OG image (`public/images/vespera.jpg`).
 - Centralized image registry in `siteConfig.images` (`logo`, `ogImage`, `heroBg`, `aboutStory`, `shippingCold`).

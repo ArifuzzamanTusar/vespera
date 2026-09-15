@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import SafeImage from "@/components/SafeImage";
-import RoeTin from "@/components/RoeTin";
 import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
@@ -137,13 +136,6 @@ export default function ShippingPage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.2} y={40}>
-            {/*
-              IMAGE: /public/images/shipping-cold.jpg
-              Size: 1200×800px
-              Prompt: "Insulated luxury caviar shipping case open on white marble,
-                       dry ice mist rising, black tin inside with gold label,
-                       cool blue-white light, premium packaging editorial photography"
-            */}
             <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", border: "1px solid rgba(201,162,39,0.28)", overflow: "hidden" }}>
               <SafeImage
                 src="/images/shipping-cold.jpg"
@@ -152,9 +144,6 @@ export default function ShippingPage() {
                 sizes="(max-width:820px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
-              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <RoeTin size="lg" />
-              </div>
             </div>
           </FadeIn>
         </div>

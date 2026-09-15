@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import SafeImage from "@/components/SafeImage";
-import RoeTin from "@/components/RoeTin";
 import RoeDivider from "@/components/RoeDivider";
 import FadeIn from "@/components/motion/FadeIn";
 import StaggerGrid from "@/components/motion/StaggerGrid";
@@ -202,21 +201,45 @@ export default function HomePage() {
 
           <StaggerGrid className="grid-3">
             <div className="card">
-              <RoeTin size="sm" />
+              <div className="card-tin-wrap">
+                <SafeImage
+                  src="/images/tin-siberian.jpg"
+                  alt="Siberian Sturgeon Classic"
+                  fill
+                  sizes="110px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="species">Acipenser baerii</p>
               <h3>Siberian Sturgeon Classic</h3>
               <p>Jet-black pearls with a firm pop and a clean, nutty, slightly spicy finish. The everyday luxury benchmark.</p>
               <Link href="/siberian" className="btn">View Tin</Link>
             </div>
             <div className="card">
-              <RoeTin size="sm" />
+              <div className="card-tin-wrap">
+                <SafeImage
+                  src="/images/tin-kaluga.jpg"
+                  alt="Kaluga Fusion Reserve"
+                  fill
+                  sizes="110px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="species">Kaluga × Amur Hybrid</p>
               <h3>Kaluga Fusion Reserve</h3>
               <p>Large olive-brown pearls, buttery and balanced with a clean briny elegance. Approachable sophistication.</p>
               <Link href="/kaluga" className="btn">View Tin</Link>
             </div>
             <div className="card">
-              <RoeTin size="sm" />
+              <div className="card-tin-wrap">
+                <SafeImage
+                  src="/images/tin-imperial.jpg"
+                  alt="Imperial Kaluga Fusion"
+                  fill
+                  sizes="110px"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="species">Kaluga × Amur, Top Selection</p>
               <h3>Imperial Kaluga Fusion</h3>
               <p>The largest, most luxurious pearls in the collection — intensely creamy, often likened to classic Beluga.</p>
@@ -248,13 +271,7 @@ export default function HomePage() {
             </div>
           </FadeIn>
           <FadeIn delay={0.2} y={40}>
-            {/*
-              IMAGE: /public/images/about-story.jpg
-              Size: 800×800px
-              Prompt: "Elegant hands carefully opening a black caviar tin, gold rim,
-                       white linen, candle light, fine dining atmosphere, dark moody background"
-            */}
-            <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", border: "1px solid rgba(201,162,39,0.28)" }}>
+            <div style={{ position: "relative", width: "100%", aspectRatio: "1/1", border: "1px solid rgba(201,162,39,0.28)", overflow: "hidden" }}>
               <SafeImage
                 src="/images/about-story.jpg"
                 alt="A tin of Vespera caviar being opened at an elegant table"
@@ -262,10 +279,6 @@ export default function HomePage() {
                 sizes="(max-width:820px) 100vw, 50vw"
                 style={{ objectFit: "cover" }}
               />
-              {/* Fallback pearl cluster shown until image is placed */}
-              <div style={{ position: "absolute", inset: 0, display: "flex", alignItems: "center", justifyContent: "center" }}>
-                <RoeTin size="lg" />
-              </div>
             </div>
           </FadeIn>
         </div>
